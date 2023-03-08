@@ -12,7 +12,7 @@
 		9F8716C129B84FE400704816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8716BF29B84FE400704816 /* Main.storyboard */; };
 		9F8716C329B84FE700704816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F8716C229B84FE700704816 /* Assets.xcassets */; };
 		9F8716C629B84FE700704816 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8716C429B84FE700704816 /* LaunchScreen.storyboard */; };
-		9F8716D129B84FE700704816 /* ChatGPTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8716D029B84FE700704816 /* ChatGPTTests.swift */; };
+		9F8716D129B84FE700704816 /* ChatterGPTTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8716D029B84FE700704816 /* ChatterGPTTest.swift */; };
 		9F8716DB29B84FE800704816 /* ChatGPTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8716DA29B84FE800704816 /* ChatGPTUITests.swift */; };
 		9F8716DD29B84FE800704816 /* ChatGPTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8716DC29B84FE800704816 /* ChatGPTUITestsLaunchTests.swift */; };
 		9F8716EA29B85CAF00704816 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8716E929B85CAF00704816 /* ChatListViewController.swift */; };
@@ -48,16 +48,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9F8716B629B84FE400704816 /* ChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F8716B629B84FE400704816 /* ChatterGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatterGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8716B929B84FE400704816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F8716BB29B84FE400704816 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9F8716C029B84FE400704816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F8716C229B84FE700704816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F8716C529B84FE700704816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F8716C729B84FE700704816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F8716CC29B84FE700704816 /* ChatGPTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatGPTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F8716D029B84FE700704816 /* ChatGPTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTTests.swift; sourceTree = "<group>"; };
-		9F8716D629B84FE800704816 /* ChatGPTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatGPTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F8716CC29B84FE700704816 /* ChatterGPTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatterGPTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F8716D029B84FE700704816 /* ChatterGPTTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatterGPTTest.swift; sourceTree = "<group>"; };
+		9F8716D629B84FE800704816 /* ChatterGPTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatterGPTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8716DA29B84FE800704816 /* ChatGPTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTUITests.swift; sourceTree = "<group>"; };
 		9F8716DC29B84FE800704816 /* ChatGPTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9F8716E929B85CAF00704816 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
@@ -103,9 +103,9 @@
 		9F8716AD29B84FE400704816 = {
 			isa = PBXGroup;
 			children = (
-				9F8716B829B84FE400704816 /* ChatGPT */,
-				9F8716CF29B84FE700704816 /* ChatGPTTests */,
-				9F8716D929B84FE800704816 /* ChatGPTUITests */,
+				9F8716B829B84FE400704816 /* ChatterGPT */,
+				9F8716CF29B84FE700704816 /* ChatterGPTTests */,
+				9F8716D929B84FE800704816 /* ChatterGPTUITests */,
 				9F8716B729B84FE400704816 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,14 +113,14 @@
 		9F8716B729B84FE400704816 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9F8716B629B84FE400704816 /* ChatGPT.app */,
-				9F8716CC29B84FE700704816 /* ChatGPTTests.xctest */,
-				9F8716D629B84FE800704816 /* ChatGPTUITests.xctest */,
+				9F8716B629B84FE400704816 /* ChatterGPT.app */,
+				9F8716CC29B84FE700704816 /* ChatterGPTTests.xctest */,
+				9F8716D629B84FE800704816 /* ChatterGPTUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9F8716B829B84FE400704816 /* ChatGPT */ = {
+		9F8716B829B84FE400704816 /* ChatterGPT */ = {
 			isa = PBXGroup;
 			children = (
 				9F8716B929B84FE400704816 /* AppDelegate.swift */,
@@ -131,25 +131,25 @@
 				9F8716BB29B84FE400704816 /* SceneDelegate.swift */,
 				9F8716FC29B8815400704816 /* view */,
 			);
-			path = ChatGPT;
+			path = ChatterGPT;
 			sourceTree = "<group>";
 		};
-		9F8716CF29B84FE700704816 /* ChatGPTTests */ = {
+		9F8716CF29B84FE700704816 /* ChatterGPTTests */ = {
 			isa = PBXGroup;
 			children = (
-				9F8716D029B84FE700704816 /* ChatGPTTests.swift */,
+				9F8716D029B84FE700704816 /* ChatterGPTTest.swift */,
 				9F87170929B8C04100704816 /* MainChatTests.swift */,
 			);
-			path = ChatGPTTests;
+			path = ChatterGPTTests;
 			sourceTree = "<group>";
 		};
-		9F8716D929B84FE800704816 /* ChatGPTUITests */ = {
+		9F8716D929B84FE800704816 /* ChatterGPTUITests */ = {
 			isa = PBXGroup;
 			children = (
 				9F8716DA29B84FE800704816 /* ChatGPTUITests.swift */,
 				9F8716DC29B84FE800704816 /* ChatGPTUITestsLaunchTests.swift */,
 			);
-			path = ChatGPTUITests;
+			path = ChatterGPTUITests;
 			sourceTree = "<group>";
 		};
 		9F8716FA29B8812E00704816 /* Model */ = {
@@ -209,19 +209,20 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9F8716B529B84FE400704816 /* ChatGPT */ = {
+		9F8716B529B84FE400704816 /* ChatterGPT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F8716E029B84FE800704816 /* Build configuration list for PBXNativeTarget "ChatGPT" */;
+			buildConfigurationList = 9F8716E029B84FE800704816 /* Build configuration list for PBXNativeTarget "ChatterGPT" */;
 			buildPhases = (
 				9F8716B229B84FE400704816 /* Sources */,
 				9F8716B329B84FE400704816 /* Frameworks */,
 				9F8716B429B84FE400704816 /* Resources */,
+				9F87170D29B8CA7700704816 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ChatGPT;
+			name = ChatterGPT;
 			packageProductDependencies = (
 				9F8716EE29B8675400704816 /* iOSCommonUtils */,
 				9F8716F129B8709400704816 /* Alamofire */,
@@ -230,12 +231,12 @@
 				9F87170729B8BD7700704816 /* RxSwift */,
 			);
 			productName = ChatGPT;
-			productReference = 9F8716B629B84FE400704816 /* ChatGPT.app */;
+			productReference = 9F8716B629B84FE400704816 /* ChatterGPT.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9F8716CB29B84FE700704816 /* ChatGPTTests */ = {
+		9F8716CB29B84FE700704816 /* ChatterGPTTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F8716E329B84FE800704816 /* Build configuration list for PBXNativeTarget "ChatGPTTests" */;
+			buildConfigurationList = 9F8716E329B84FE800704816 /* Build configuration list for PBXNativeTarget "ChatterGPTTests" */;
 			buildPhases = (
 				9F8716C829B84FE700704816 /* Sources */,
 				9F8716C929B84FE700704816 /* Frameworks */,
@@ -246,14 +247,14 @@
 			dependencies = (
 				9F8716CE29B84FE700704816 /* PBXTargetDependency */,
 			);
-			name = ChatGPTTests;
+			name = ChatterGPTTests;
 			productName = ChatGPTTests;
-			productReference = 9F8716CC29B84FE700704816 /* ChatGPTTests.xctest */;
+			productReference = 9F8716CC29B84FE700704816 /* ChatterGPTTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9F8716D529B84FE800704816 /* ChatGPTUITests */ = {
+		9F8716D529B84FE800704816 /* ChatterGPTUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F8716E629B84FE800704816 /* Build configuration list for PBXNativeTarget "ChatGPTUITests" */;
+			buildConfigurationList = 9F8716E629B84FE800704816 /* Build configuration list for PBXNativeTarget "ChatterGPTUITests" */;
 			buildPhases = (
 				9F8716D229B84FE800704816 /* Sources */,
 				9F8716D329B84FE800704816 /* Frameworks */,
@@ -264,9 +265,9 @@
 			dependencies = (
 				9F8716D829B84FE800704816 /* PBXTargetDependency */,
 			);
-			name = ChatGPTUITests;
+			name = ChatterGPTUITests;
 			productName = ChatGPTUITests;
-			productReference = 9F8716D629B84FE800704816 /* ChatGPTUITests.xctest */;
+			productReference = 9F8716D629B84FE800704816 /* ChatterGPTUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -292,7 +293,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9F8716B129B84FE400704816 /* Build configuration list for PBXProject "ChatGPT" */;
+			buildConfigurationList = 9F8716B129B84FE400704816 /* Build configuration list for PBXProject "ChatterGPT" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -311,9 +312,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9F8716B529B84FE400704816 /* ChatGPT */,
-				9F8716CB29B84FE700704816 /* ChatGPTTests */,
-				9F8716D529B84FE800704816 /* ChatGPTUITests */,
+				9F8716B529B84FE400704816 /* ChatterGPT */,
+				9F8716CB29B84FE700704816 /* ChatterGPTTests */,
+				9F8716D529B84FE800704816 /* ChatterGPTUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -345,6 +346,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9F87170D29B8CA7700704816 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nswiftformat .\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9F8716B229B84FE400704816 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -367,7 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F87170A29B8C04100704816 /* MainChatTests.swift in Sources */,
-				9F8716D129B84FE700704816 /* ChatGPTTests.swift in Sources */,
+				9F8716D129B84FE700704816 /* ChatterGPTTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,12 +406,12 @@
 /* Begin PBXTargetDependency section */
 		9F8716CE29B84FE700704816 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9F8716B529B84FE400704816 /* ChatGPT */;
+			target = 9F8716B529B84FE400704816 /* ChatterGPT */;
 			targetProxy = 9F8716CD29B84FE700704816 /* PBXContainerItemProxy */;
 		};
 		9F8716D829B84FE800704816 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9F8716B529B84FE400704816 /* ChatGPT */;
+			target = 9F8716B529B84FE400704816 /* ChatterGPT */;
 			targetProxy = 9F8716D729B84FE800704816 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -538,7 +559,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CUT53EQ8B5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ChatGPT/Info.plist;
+				INFOPLIST_FILE = ChatterGPT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -549,7 +570,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = allen870619.ChatGPT;
+				PRODUCT_BUNDLE_IDENTIFIER = allen870619.ChatterGPT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -566,7 +587,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CUT53EQ8B5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ChatGPT/Info.plist;
+				INFOPLIST_FILE = ChatterGPT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -577,7 +598,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = allen870619.ChatGPT;
+				PRODUCT_BUNDLE_IDENTIFIER = allen870619.ChatterGPT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -601,7 +622,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatGPT.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChatGPT";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatterGPT.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChatterGPT";
 			};
 			name = Debug;
 		};
@@ -621,7 +642,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatGPT.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChatGPT";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatterGPT.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChatterGPT";
 			};
 			name = Release;
 		};
@@ -664,7 +685,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9F8716B129B84FE400704816 /* Build configuration list for PBXProject "ChatGPT" */ = {
+		9F8716B129B84FE400704816 /* Build configuration list for PBXProject "ChatterGPT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F8716DE29B84FE800704816 /* Debug */,
@@ -673,7 +694,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F8716E029B84FE800704816 /* Build configuration list for PBXNativeTarget "ChatGPT" */ = {
+		9F8716E029B84FE800704816 /* Build configuration list for PBXNativeTarget "ChatterGPT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F8716E129B84FE800704816 /* Debug */,
@@ -682,7 +703,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F8716E329B84FE800704816 /* Build configuration list for PBXNativeTarget "ChatGPTTests" */ = {
+		9F8716E329B84FE800704816 /* Build configuration list for PBXNativeTarget "ChatterGPTTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F8716E429B84FE800704816 /* Debug */,
@@ -691,7 +712,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F8716E629B84FE800704816 /* Build configuration list for PBXNativeTarget "ChatGPTUITests" */ = {
+		9F8716E629B84FE800704816 /* Build configuration list for PBXNativeTarget "ChatterGPTUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F8716E729B84FE800704816 /* Debug */,
