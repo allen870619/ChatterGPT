@@ -23,7 +23,16 @@ final class ChatGPTTests: XCTestCase {
         let exp = XCTestExpectation(description: "Api connectionTest")
 
         Task {
-            let token = "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"
+            guard let plistPath = Bundle.main.path(forResource: "token", ofType: "plist"),
+                  let plistData = FileManager.default.contents(atPath: plistPath),
+                  let plistDictionary = try? PropertyListSerialization.propertyList(from: plistData, options: [], format: nil) as? [String: Any]
+            else {
+                print("Failed to load plist file")
+                return
+            }
+            guard let token = plistDictionary["tokenId"] as? String else {
+                throw NSError(domain: "Token Error", code: 1)
+            }
 
             var header = HTTPHeaders.default
             header.add(.init(name: "Content-Type", value: "application/json"))

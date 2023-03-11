@@ -19,7 +19,7 @@ class MainChatViewController: KBShifterViewController {
     override func viewDidLoad() {
         shiftMode = .kbHeight
 
-        viewModel.delegate = self
+//        viewModel.delegate = self
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -31,6 +31,10 @@ class MainChatViewController: KBShifterViewController {
                 self?.tvMessage.text.removeAll()
             }
         }), for: .touchUpInside)
+
+        viewModel.messageList.bind { [unowned self] _ in
+            notifyUpdateMessageTable()
+        }
     }
 
     deinit {
@@ -40,11 +44,11 @@ class MainChatViewController: KBShifterViewController {
 
 extension MainChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        viewModel.messageList.count
+        viewModel.messageList.value.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let data = viewModel.messageList[indexPath.row]
+        let data = viewModel.messageList.value[indexPath.row]
         var cell: ChatboxCell?
         if data.role != "user" {
             cell = tableView.dequeueReusableCell(withIdentifier: "recvChatboxCell") as? RecvChatboxCell
@@ -60,8 +64,8 @@ extension MainChatViewController: MainChatDelegate {
     func notifyUpdateMessageTable() {
         DispatchQueue.main.async { [self] in
 
-            let animation: UITableView.RowAnimation = viewModel.messageList.last?.role == "user" ? .right : .left
-            let count = viewModel.messageList.count
+            let animation: UITableView.RowAnimation = viewModel.messageList.value.last?.role == "user" ? .right : .left
+            let count = viewModel.messageList.value.count
             let indexPath = IndexPath(row: count - 1, section: 0)
             tableView.insertRows(at: [indexPath], with: animation)
             self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)

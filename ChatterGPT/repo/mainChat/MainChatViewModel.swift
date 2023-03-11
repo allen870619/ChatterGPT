@@ -10,12 +10,13 @@ import Foundation
 typealias ChatResponseResult = Result<ChatCompletion, Error>
 
 class MainChatViewModel {
-    var messageList = [Message]() {
-        didSet {
-            // update ui
-            delegate?.notifyUpdateMessageTable()
-        }
-    }
+//    var messageList = [Message]() {
+//        didSet {
+//            // update ui
+//            delegate?.notifyUpdateMessageTable()
+//        }
+//    }
+    var messageList = Observable([Message]())
 
     weak var delegate: MainChatDelegate?
     var service: MainChatService?
@@ -31,18 +32,18 @@ class MainChatViewModel {
     }
 
     func sendMessage(message: String) {
-        messageList.append(.init(role: "user", content: message))
-        task = service?.sendRequest(currentMessage: message, history: messageList) { [weak self] data in
+        messageList.value.append(.init(role: "user", content: message))
+        task = service?.sendRequest(currentMessage: message, history: messageList.value) { [weak self] data in
             // update viewModel data
             do {
                 let message = try data.get().choices.first?.message
                 if let message {
-                    self?.messageList.append(message)
+                    self?.messageList.value.append(message)
                 } else {
                     throw NSError(domain: "Empty Data", code: 999)
                 }
             } catch {
-                self?.messageList.append(.init(role: "system", content: error.localizedDescription))
+                self?.messageList.value.append(.init(role: "system", content: error.localizedDescription))
             }
         }
     }
@@ -55,7 +56,7 @@ protocol MainChatDelegate: AnyObject {
 class MockMainChatService: MainChatService {
     func sendRequest(currentMessage _: String, history _: [Message], completion: @escaping (ChatResponseResult) -> Void) -> Task<Void, Never>? {
         Task {
-            try? await Task.sleep(nanoseconds: 5_000_000_000)
+            try? await Task.sleep(nanoseconds: 2_000_000_000)
             let mockMessage = Message(role: "assistant", content: "Hello there, how may I assist you today?")
             let mockChoice = Choice(index: 0, message: mockMessage, finishReason: "stop")
             let mockUsage = Usage(promptTokens: 9, completionTokens: 12, totalTokens: 21)
