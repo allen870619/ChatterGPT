@@ -5,7 +5,8 @@
 //  Created by Lee Yen Lin on 2023/3/8.
 //
 
-@testable import ChatGPT
+@testable import ChatterGPT
+import RxSwift
 import XCTest
 
 final class MainChatTests: XCTestCase {
@@ -32,7 +33,23 @@ final class MainChatTests: XCTestCase {
             expectation.fulfill()
         }
 
-        wait(for: [expectation], timeout: 3)
+        wait(for: [expectation], timeout: 5)
+        XCTAssertEqual(viewModel.messageList[1].content, "Hello there, how may I assist you today?")
+    }
+
+    func testSendMessageRx() throws {
+        XCTAssertTrue(viewModel.messageList.isEmpty)
+        let obs = viewModel.sendMessageRx(message: "Hello")
+        let expectation = XCTestExpectation()
+        let bag = DisposeBag()
+
+        obs.subscribe { _ in
+            XCTAssertEqual(self.viewModel.messageList[0].content, "Hello")
+        } onCompleted: {
+            expectation.fulfill()
+        }.disposed(by: bag)
+
+        wait(for: [expectation], timeout: 5)
         XCTAssertEqual(viewModel.messageList[1].content, "Hello there, how may I assist you today?")
     }
 }
@@ -40,7 +57,7 @@ final class MainChatTests: XCTestCase {
 class MockMainChatService: MainChatService {
     func sendRequest(currentMessage _: String, history _: [Message], completion: @escaping (ChatResponseResult) -> Void) -> Task<Void, Never>? {
         Task {
-            try? await Task.sleep(nanoseconds: 2_000_000_000)
+            try? await Task.sleep(nanoseconds: 3_000_000_000)
             let mockMessage = Message(role: "assistant", content: "Hello there, how may I assist you today?")
             let mockChoice = Choice(index: 0, message: mockMessage, finishReason: "stop")
             let mockUsage = Usage(promptTokens: 9, completionTokens: 12, totalTokens: 21)

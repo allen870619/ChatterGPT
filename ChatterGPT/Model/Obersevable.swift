@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Observable<T> {
+class CustomObservable<T> {
     typealias BindAction = (T) -> Void
     var listener: BindAction?
 

@@ -6,7 +6,7 @@
 //
 
 import Alamofire
-@testable import ChatGPT
+@testable import ChatterGPT
 import XCTest
 
 final class ChatGPTTests: XCTestCase {
